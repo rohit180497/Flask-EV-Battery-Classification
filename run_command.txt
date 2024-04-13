@@ -1,0 +1,1 @@
+(.venv) PS D:\workspace\ml_projects\battery_classification\flask> python -m flask run
