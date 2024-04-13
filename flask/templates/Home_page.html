@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <title>Get to Know Your EV Battery Health</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Codedthemes" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/new.css">
+    <link rel="stylesheet" href="static/css/datepicker.css">
+
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+
+    <style>
+        h4 {
+            color: grey;
+        }
+    </style>
+
+</head>
+
+<body class="">
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start 
+    
+    <-- [ Header ] start -->
+
+
+    </header>
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light headerpos-fixed header-blue">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+            <a href="#!" class="b-brand">
+                <!-- Change the image source to your EV vehicle image -->
+                <img src="static/images/vehicle_battery.webp" alt="" class="logo" style="height: 100px;width: 200px;">
+                <img src="static/images/vehicle_battery.webp" alt="" class="logo-thumb"
+                    style="height: 70px; width: 150px;">
+            </a>
+            <a href="#!" class="mob-toggler">
+                <i class="feather icon-more-vertical"></i>
+            </a>
+        </div>
+
+        <!-- Centered heading -->
+        <div style="flex-grow: 1; text-align: center; background-color: transparent;">
+            <h1 style="font-weight: bold; color: rgb(18, 1, 1); font-size: 28px;">Get to Know
+                Your EV's Battery Health</h1>
+        </div>
+
+        <!-- Right-hand side content -->
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item">
+                    <a href="#!" class="full-screen" onclick="javascript:toggleFullScreen()">
+                        <i class="feather icon-maximize"></i>
+                    </a>
+                </li> -->
+            </ul>
+            <b><span style="color:#0c0c0cee; font-size: medium;"> Hello, Rohit </span></b>
+            <img src="/static/images/rohit.jpg" class="img-radius wid-30 ml-2" alt="User-Profile-Image" />
+        </div>
+    </header>
+
+
+    <!-- [ Header ] end -->
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-content">
+            <br>
+            <div class="row">
+                <!-- order-card start -->
+                <!-- order-card end -->
+                <!-- users visite start -->
+                <div class="col-md-12 col-xl-6">
+                    <div class="card">
+                        <div class="card-header bg-patern">
+
+                        </div>
+                        <div class="card-body bg-patern">
+                            <h4>Enter the Specifications of Battery </h4>
+                            <br>
+
+                            <div class="form-group-1">
+                                <!-- <input type="number" id="Voltage" placeholder="Voltage" required />
+
+                                    <input type="number" id="Current" placeholder="Current" required />
+
+                                    <input type="number" id="Charge_Discharge_Efficiency" placeholder="Charge_Discharge_Efficiency" required />
+
+                                    <input type="number" id="Charge_Rate" placeholder="Charge_Rate" required />
+
+                                    <input id='Voltage_Sag' placeholder='Voltage_Sag' type="number" required/>
+
+                                    <input id='EIS_Data' placeholder='EIS_Data' type="number" required/>
+
+                                    <input type="number" id="Idle_Time" placeholder="Idle_Time" required />
+
+                                    <input type="number" id="Charging_Time" placeholder="Charging_Time" required />
+
+                                    <input id='Payload_Distribution' placeholder='Payload_Distribution' type="number" required/>
+
+                                    <input id='Acceleration' placeholder='Acceleration' type="number" required/>
+
+                                    <input type="number" id="Cycle_Life" placeholder="Cycle_Life" required />
+                                    <input type="number" id="Chemical_Composition" placeholder="Chemical_Composition" required />
+    
+                                    <input type="number" id="Rate_of_Charge_Peak" placeholder="Rate_of_Charge_Peak" required />
+    
+                            
+                                
+                                    <input id='Tire_Pressure' placeholder='Tire_Pressure' type="number" required/>
+    
+                                    <input id='Regenerative_Braking' placeholder='Regenerative_Braking' type="number" required/> -->
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="Voltage" class="label-style">Voltage</label>
+                                        <input type="number" id="Voltage" class="input-style" required/>
+                                    </div>
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="Current" class="label-style">Current</label>
+                                        <input type="number" id="Current" required oninput="showPlaceholder(this)" />
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="Charge_Discharge_Efficiency" class="label-style">Charge_Discharge_Efficiency</label>
+                                        <input type="number" id="Charge_Discharge_Efficiency" required  />
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="Charge_Rate" class="label-style">Charge_Rate</label>
+                                        <input type="number" id="Charge_Rate" required  />
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="Voltage_Sag" class="label-style">Voltage_Sag</label>
+                                        <input type="number" id="Voltage_Sag" required  />
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="EIS_Data" class="label-style">EIS_Data</label>
+                                        <input type="number" id="EIS_Data" required  />
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="Idle_Time" class="label-style">Idle_Time</label>
+                                        <input type="number" id="Idle_Time" required  />
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="Charging_Time" class="label-style">Charging Time</label>
+                                        <input type="number" id="Charging_Time" required  />
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="Payload_Distribution" class="label-style">Payload_Distribution</label>
+                                        <input type="number" id="Payload_Distribution" required  />
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="Acceleration" class="label-style">Acceleration</label>
+                                        <input type="number" id="Acceleration" required  />
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="Cycle_Life" class="label-style">Cycle_Life</label>
+                                        <input type="number" id="Cycle_Life" required  />
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="Chemical_Composition" class="label-style">Chemical_Composition</label>
+                                        <input type="number" id="Chemical_Composition" required  />
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="Rate_of_Charge_Peak" class="label-style">Rate_of_Charge_Peak</label>
+                                        <input type="number" id="Rate_of_Charge_Peak" required  />
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="Tire_Pressure" class="label-style">Tire_Pressure</label>
+                                        <input type="number" id="Tire_Pressure" required  />
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="Regenerative_Braking" class="label-style">Regenerative_Braking</label>
+                                        <input type="number" id="Regenerative_Braking" required  />
+                                    </div>
+<!--
+
+                                <input type="number" id="Current" placeholder="Current" data-placeholder="Current"
+                                    required oninput="showPlaceholder(this)" />
+                                <input type="number" id="Charge_Discharge_Efficiency"
+                                    placeholder="Charge_Discharge_Efficiency"
+                                    data-placeholder="Charge_Discharge_Efficiency" required
+                                    oninput="showPlaceholder(this)" />
+                                <input type="number" id="Charge_Rate" placeholder="Charge_Rate"
+                                    data-placeholder="Charge_Rate" required oninput="showPlaceholder(this)" />
+                                <input type="number" id="Voltage_Sag" placeholder="Voltage_Sag"
+                                    data-placeholder="Voltage_Sag" required oninput="showPlaceholder(this)" />
+                                <input type="number" id="EIS_Data" placeholder="EIS_Data" data-placeholder="EIS_Data"
+                                    required oninput="showPlaceholder(this)" />
+                                <input type="number" id="Idle_Time" placeholder="Idle_Time" data-placeholder="Idle_Time"
+                                    required oninput="showPlaceholder(this)" />
+                                <input type="number" id="Charging_Time" placeholder="Charging_Time"
+                                    data-placeholder="Charging_Time" required oninput="showPlaceholder(this)" />
+                                <input type="number" id="Payload_Distribution" placeholder="Payload_Distribution"
+                                    data-placeholder="Payload_Distribution" required oninput="showPlaceholder(this)" />
+                                <input type="number" id="Acceleration" placeholder="Acceleration"
+                                    data-placeholder="Acceleration" required oninput="showPlaceholder(this)" />
+                                <input type="number" id="Cycle_Life" placeholder="Cycle_Life"
+                                    data-placeholder="Cycle_Life" required oninput="showPlaceholder(this)" />
+                                <input type="number" id="Chemical_Composition" placeholder="Chemical_Composition"
+                                    data-placeholder="Chemical_Composition" required oninput="showPlaceholder(this)" />
+                                <input type="number" id="Rate_of_Charge_Peak" placeholder="Rate_of_Charge_Peak"
+                                    data-placeholder="Rate_of_Charge_Peak" required oninput="showPlaceholder(this)" />
+                                <input type="number" id="Tire_Pressure" placeholder="Tire_Pressure"
+                                    data-placeholder="Tire_Pressure" required oninput="showPlaceholder(this)" />
+                                <input type="number" id="Regenerative_Braking" placeholder="Regenerative_Braking"
+                                    data-placeholder="Regenerative_Braking" required oninput="showPlaceholder(this)" />
+
+-->                                    
+
+
+                                <div class="form-check">
+                                    <input type="checkbox" id="agree-term" class="agree-term" />
+                                    <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree
+                                        to the <a href="#" class="term-service">Terms and Conditions</a></label>
+                                </div>
+                                <div>
+                                    <input type="button" onclick="Predict();" id="submit" class="submit"
+                                        value="Predict" />
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12 col-xl-6">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card" style='height:500px'>
+                                <div class="card-header bg-patern">
+                                    <h4>PREDICTION</h4>
+                                </div>
+                                <div class="card-body bg-patern">
+                                    <div class='row'>
+                                        <div class="col-md-12 col-xl-6">
+                                            <div class="card bg-c-green order-card">
+                                                <div class="card-body">
+                                                    <h2 class="text-right text-white"><i
+                                                            class="feather icon-user float-left"></i><span
+                                                            id="status1">Blank</span></h2>
+                                                    <p class="m-b-0">State of Health Towards Yes<span
+                                                            class="float-right" id='att_no'>0</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-xl-6">
+                                            <div class="card bg-c-red order-card">
+                                                <div class="card-body">
+                                                    <h2 class="text-right text-white"><i
+                                                            class="feather icon-user float-left"></i><span
+                                                            id="status2">Blank</span></h2>
+                                                    <p class="m-b-0">State of Health Towards No<span class="float-right"
+                                                            id='att_yes'>0</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id='employee_id' style='display:none;'> </div>
+            </div>
+            <!-- [ Main Content ] end -->
+        </div>
+    </div>
+
+    <!-- Required Js -->
+    <script src="static/js/vendor-all.min.js"></script>
+    <script type="text/javascript" src="/static/js/moment.js"></script>
+    <script src="static/js/plugins/bootstrap.min.js"></script>
+    <script src="static/js/pcoded.min.js"></script>
+
+    <!-- Apex Chart -->
+    <script src="static/js/plugins/apexcharts.min.js"></script>
+    <script type="text/javascript" src="/static/js/daterangepicker.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- custom-chart js -->
+
+
+    <script src="static/js/pages/dashboard-main.js"></script>
+    <!-- Resources -->
+
+    <script>
+
+        function Predict() {
+
+            var Voltage = $('#Voltage').val();
+            var Current = $('#Current').val();
+            var Charge_Discharge_Efficiency = $('#Charge_Discharge_Efficiency').val();
+            var Charge_Rate = $('#Charge_Rate').val();
+            var Voltage_Sag = $('#Voltage_Sag').val();
+            var EIS_Data = $('#EIS_Data').val();
+            var Idle_Time = $('#Idle_Time').val();
+            var Charging_Time = $('#Charging_Time').val();
+            var Payload_Distribution = $('#Payload_Distribution').val();
+            var Acceleration = $('#Acceleration').val();
+            var Cycle_Life = $('#Cycle_Life').val()
+            var Chemical_Composition = $('#Chemical_Composition').val();
+            var Rate_of_Charge_Peak = $('#Rate_of_Charge_Peak').val();
+            var Tire_Pressure = $('#Tire_Pressure').val();
+            var Regenerative_Braking = $('#Regenerative_Braking').val()
+
+
+            data = {
+                'Voltage': Voltage,
+                'Current': Current,
+                'Charge_Discharge_Efficiency': Charge_Discharge_Efficiency,
+                'Charge_Rate': Charge_Rate,
+                'Voltage_Sag': Voltage_Sag,
+                'EIS_Data': EIS_Data,
+                'Idle_Time': Idle_Time,
+                'Charging_Time': Charging_Time,
+                'Payload_Distribution': Payload_Distribution,
+                'Acceleration': Acceleration,
+                'Cycle_Life': Cycle_Life,
+                'Chemical_Composition': Chemical_Composition,
+                'Rate_of_Charge_Peak': Rate_of_Charge_Peak,
+                'Tire_Pressure': Tire_Pressure,
+                'Regenerative_Braking': Regenerative_Braking
+            }
+
+            console.log(data);
+            data = JSON.stringify(data);
+            $.ajax({
+                url: "/",
+                type: "POST",
+                data: {
+                    arguments: data
+                },
+                success: function (response) {
+
+
+                    if (response.Rate_yes > 0.5) {
+                        document.getElementById("status2").innerHTML = 'Degraded Battery Health';
+                        document.getElementById("status1").innerHTML = '-';
+                    }
+                    else {
+                        document.getElementById("status2").innerHTML = '-';
+                        document.getElementById("status1").innerHTML = 'Good Battery Health';
+                    }
+
+                    document.getElementById("att_no").innerHTML = response.Rate_no;
+                    document.getElementById("att_yes").innerHTML = response.Rate_yes;
+
+
+                    console.log(response.Rate_yes);
+
+
+                }
+            });
+        }
+
+        window.onload = function () {
+
+            swal("Welcome!", "Due to time complexity didnt added validations in form feilds, PLEASE DONT LEAVE FORM FIELDS EMPTYYY!");
+        }
+    </script>
+
+
+</body>
+
+
+
+
+
+</html>
