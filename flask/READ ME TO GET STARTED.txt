@@ -1,7 +1,5 @@
 Hi,
 
-- Haven't added requirement.txt later realized I have forgetten to Run it on Virtual Environment.
-
 - Run App.py on anaconda prompt(recommended) or CMD shell and only error it is comes will be related to PATH. 
 
 _ RUN it on :  http://127.0.0.1:5050
